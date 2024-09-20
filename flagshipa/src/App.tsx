@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setPercentages, updatePercentage } from './store/actions';
 import PercentageSlider from './components/PercentageSlider';
 import { PercentageItem } from './types';
+import { State } from './store/reducer';
 
 const App: React.FC = () => {
-    const percentages = useSelector((state: any) => state.percentages);
+    const percentages = useSelector((state: State) => state.percentages);
     const dispatch = useDispatch();
 
     useEffect(() => {
